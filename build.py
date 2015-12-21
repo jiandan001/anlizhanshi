@@ -14,10 +14,21 @@ def filesystem_loader():
   print(here)
   return loaders.FileSystemLoader(here + '/templates')
 
+item_list = []
+for item in os.listdir("../"):
+  if item.find("_") is not -1:
+    item_list.append(item.encode('utf8'))
+
+data = {
+  "html_title": u"3D展厅模板",
+  "item_list": item_list,
+  "count": len(item_list)
+}
+
 #env = Environment(loader=filesystem_loader)
 env = Environment(loader=loaders.FileSystemLoader('templates'))
 tmpl = env.get_template('more.html')
-output = tmpl.render()
+output = tmpl.render(data = data)
 
 # to save the results
 with open("more.html", "wb") as fh:
