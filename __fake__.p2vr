@@ -1,0 +1,1013 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Pano2VR project file  -->
+<pano2vrconfig>
+  <tour>
+    <panorama>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>__fake__.jpg</filename>
+        <hfov>360</hfov>
+      </input>
+      <viewingparameter>
+        <pan>
+          <start>0</start>
+          <min>0</min>
+          <max>360</max>
+        </pan>
+        <tilt>
+          <start>0</start>
+          <min>-90</min>
+          <max>90</max>
+        </tilt>
+        <fov>
+          <start>60</start>
+          <min>45</min>
+          <max>75</max>
+        </fov>
+        <pannorth>0</pannorth>
+      </viewingparameter>
+      <userdata>
+        <datetime>2014:11:21 18:55:19</datetime>
+      </userdata>
+      <hotspots/>
+      <sounds/>
+      <id>node1</id>
+      <output/>
+    </panorama>
+  </tour>
+  <panorama>
+    <userdata>
+      <datetime>2014:11:21 18:55:19</datetime>
+    </userdata>
+    <output>
+      <flash>
+        <html>
+          <enabled>1</enabled>
+          <filename>index.html</filename>
+          <template>anlizhanshi.ggt</template>
+          <values>
+            <value id="zhanguan_banner0_image">image/tupian/gd01.png</value>
+            <value id="zhanguan_banner0_path">../rendafuzhongxinxixuejiaoxuexuting/index.html</value>
+            <value id="zhanguan_banner0_thumbnail">image/tupian/gx01.png</value>
+            <value id="zhanguan_banner1_image">image/tupian/gx02.jpg</value>
+            <value id="zhanguan_banner1_path">../rendafuzhongxinxixuejiaoxueaoxiangjihua/index.html</value>
+            <value id="zhanguan_banner1_thumbnail">image/tupian/gx02.jpg</value>
+            <value id="zhanguan_banner2_image">image/tupian/gx03.jpg</value>
+            <value id="zhanguan_banner2_path">../rendafuzhongxinxixuejiaoxuekegai/index.html</value>
+            <value id="zhanguan_banner2_thumbnail">image/tupian/gx03.jpg</value>
+            <value id="zhanguan_banner3_image"></value>
+            <value id="zhanguan_banner3_path"></value>
+            <value id="zhanguan_banner3_thumbnail"></value>
+            <value id="zhanguan_banner4_image"></value>
+            <value id="zhanguan_banner4_path"></value>
+            <value id="zhanguan_banner4_thumbnail"></value>
+            <value id="zhanguan_banner5_image"></value>
+            <value id="zhanguan_banner5_path"></value>
+            <value id="zhanguan_banner5_thumbnail"></value>
+            <value id="zhanguan_banner6_image"></value>
+            <value id="zhanguan_banner6_path"></value>
+            <value id="zhanguan_banner6_thumbnail"></value>
+            <value id="zhanguan_banner7_image"></value>
+            <value id="zhanguan_banner7_path"></value>
+            <value id="zhanguan_banner7_thumbnail"></value>
+            <value id="zhanguan_html_logo">image/logo.png</value>
+            <value id="zhanguan_html_title">3D展厅模板</value>
+            <value id="zhanguan_nav0_pano0_path">swf/f101.swf</value>
+            <value id="zhanguan_nav0_pano0_thumbnail">image/tupian/f101.png</value>
+            <value id="zhanguan_nav0_pano10_path"></value>
+            <value id="zhanguan_nav0_pano10_thumbnail"></value>
+            <value id="zhanguan_nav0_pano11_path"></value>
+            <value id="zhanguan_nav0_pano11_thumbnail"></value>
+            <value id="zhanguan_nav0_pano12_path"></value>
+            <value id="zhanguan_nav0_pano12_thumbnail"></value>
+            <value id="zhanguan_nav0_pano13_path"></value>
+            <value id="zhanguan_nav0_pano13_thumbnail"></value>
+            <value id="zhanguan_nav0_pano14_path"></value>
+            <value id="zhanguan_nav0_pano14_thumbnail"></value>
+            <value id="zhanguan_nav0_pano15_path"></value>
+            <value id="zhanguan_nav0_pano15_thumbnail"></value>
+            <value id="zhanguan_nav0_pano16_path"></value>
+            <value id="zhanguan_nav0_pano16_thumbnail"></value>
+            <value id="zhanguan_nav0_pano17_path"></value>
+            <value id="zhanguan_nav0_pano17_thumbnail"></value>
+            <value id="zhanguan_nav0_pano18_path"></value>
+            <value id="zhanguan_nav0_pano18_thumbnail"></value>
+            <value id="zhanguan_nav0_pano19_path"></value>
+            <value id="zhanguan_nav0_pano19_thumbnail"></value>
+            <value id="zhanguan_nav0_pano1_path">swf/f102.swf</value>
+            <value id="zhanguan_nav0_pano1_thumbnail">image/tupian/f102.png</value>
+            <value id="zhanguan_nav0_pano2_path">swf/f103.swf</value>
+            <value id="zhanguan_nav0_pano2_thumbnail">image/tupian/f103.png</value>
+            <value id="zhanguan_nav0_pano3_path"></value>
+            <value id="zhanguan_nav0_pano3_thumbnail"></value>
+            <value id="zhanguan_nav0_pano4_path"></value>
+            <value id="zhanguan_nav0_pano4_thumbnail"></value>
+            <value id="zhanguan_nav0_pano5_path"></value>
+            <value id="zhanguan_nav0_pano5_thumbnail"></value>
+            <value id="zhanguan_nav0_pano6_path"></value>
+            <value id="zhanguan_nav0_pano6_thumbnail"></value>
+            <value id="zhanguan_nav0_pano7_path"></value>
+            <value id="zhanguan_nav0_pano7_thumbnail"></value>
+            <value id="zhanguan_nav0_pano8_path"></value>
+            <value id="zhanguan_nav0_pano8_thumbnail"></value>
+            <value id="zhanguan_nav0_pano9_path"></value>
+            <value id="zhanguan_nav0_pano9_thumbnail"></value>
+            <value id="zhanguan_nav0_title">热门展厅</value>
+            <value id="zhanguan_nav10_pano0_path"></value>
+            <value id="zhanguan_nav10_pano0_thumbnail"></value>
+            <value id="zhanguan_nav10_pano10_path"></value>
+            <value id="zhanguan_nav10_pano10_thumbnail"></value>
+            <value id="zhanguan_nav10_pano11_path"></value>
+            <value id="zhanguan_nav10_pano11_thumbnail"></value>
+            <value id="zhanguan_nav10_pano12_path"></value>
+            <value id="zhanguan_nav10_pano12_thumbnail"></value>
+            <value id="zhanguan_nav10_pano13_path"></value>
+            <value id="zhanguan_nav10_pano13_thumbnail"></value>
+            <value id="zhanguan_nav10_pano14_path"></value>
+            <value id="zhanguan_nav10_pano14_thumbnail"></value>
+            <value id="zhanguan_nav10_pano15_path"></value>
+            <value id="zhanguan_nav10_pano15_thumbnail"></value>
+            <value id="zhanguan_nav10_pano16_path"></value>
+            <value id="zhanguan_nav10_pano16_thumbnail"></value>
+            <value id="zhanguan_nav10_pano17_path"></value>
+            <value id="zhanguan_nav10_pano17_thumbnail"></value>
+            <value id="zhanguan_nav10_pano18_path"></value>
+            <value id="zhanguan_nav10_pano18_thumbnail"></value>
+            <value id="zhanguan_nav10_pano19_path"></value>
+            <value id="zhanguan_nav10_pano19_thumbnail"></value>
+            <value id="zhanguan_nav10_pano1_path"></value>
+            <value id="zhanguan_nav10_pano1_thumbnail"></value>
+            <value id="zhanguan_nav10_pano2_path"></value>
+            <value id="zhanguan_nav10_pano2_thumbnail"></value>
+            <value id="zhanguan_nav10_pano3_path"></value>
+            <value id="zhanguan_nav10_pano3_thumbnail"></value>
+            <value id="zhanguan_nav10_pano4_path"></value>
+            <value id="zhanguan_nav10_pano4_thumbnail"></value>
+            <value id="zhanguan_nav10_pano5_path"></value>
+            <value id="zhanguan_nav10_pano5_thumbnail"></value>
+            <value id="zhanguan_nav10_pano6_path"></value>
+            <value id="zhanguan_nav10_pano6_thumbnail"></value>
+            <value id="zhanguan_nav10_pano7_path"></value>
+            <value id="zhanguan_nav10_pano7_thumbnail"></value>
+            <value id="zhanguan_nav10_pano8_path"></value>
+            <value id="zhanguan_nav10_pano8_thumbnail"></value>
+            <value id="zhanguan_nav10_pano9_path"></value>
+            <value id="zhanguan_nav10_pano9_thumbnail"></value>
+            <value id="zhanguan_nav10_title"></value>
+            <value id="zhanguan_nav11_pano0_path"></value>
+            <value id="zhanguan_nav11_pano0_thumbnail"></value>
+            <value id="zhanguan_nav11_pano10_path"></value>
+            <value id="zhanguan_nav11_pano10_thumbnail"></value>
+            <value id="zhanguan_nav11_pano11_path"></value>
+            <value id="zhanguan_nav11_pano11_thumbnail"></value>
+            <value id="zhanguan_nav11_pano12_path"></value>
+            <value id="zhanguan_nav11_pano12_thumbnail"></value>
+            <value id="zhanguan_nav11_pano13_path"></value>
+            <value id="zhanguan_nav11_pano13_thumbnail"></value>
+            <value id="zhanguan_nav11_pano14_path"></value>
+            <value id="zhanguan_nav11_pano14_thumbnail"></value>
+            <value id="zhanguan_nav11_pano15_path"></value>
+            <value id="zhanguan_nav11_pano15_thumbnail"></value>
+            <value id="zhanguan_nav11_pano16_path"></value>
+            <value id="zhanguan_nav11_pano16_thumbnail"></value>
+            <value id="zhanguan_nav11_pano17_path"></value>
+            <value id="zhanguan_nav11_pano17_thumbnail"></value>
+            <value id="zhanguan_nav11_pano18_path"></value>
+            <value id="zhanguan_nav11_pano18_thumbnail"></value>
+            <value id="zhanguan_nav11_pano19_path"></value>
+            <value id="zhanguan_nav11_pano19_thumbnail"></value>
+            <value id="zhanguan_nav11_pano1_path"></value>
+            <value id="zhanguan_nav11_pano1_thumbnail"></value>
+            <value id="zhanguan_nav11_pano2_path"></value>
+            <value id="zhanguan_nav11_pano2_thumbnail"></value>
+            <value id="zhanguan_nav11_pano3_path"></value>
+            <value id="zhanguan_nav11_pano3_thumbnail"></value>
+            <value id="zhanguan_nav11_pano4_path"></value>
+            <value id="zhanguan_nav11_pano4_thumbnail"></value>
+            <value id="zhanguan_nav11_pano5_path"></value>
+            <value id="zhanguan_nav11_pano5_thumbnail"></value>
+            <value id="zhanguan_nav11_pano6_path"></value>
+            <value id="zhanguan_nav11_pano6_thumbnail"></value>
+            <value id="zhanguan_nav11_pano7_path"></value>
+            <value id="zhanguan_nav11_pano7_thumbnail"></value>
+            <value id="zhanguan_nav11_pano8_path"></value>
+            <value id="zhanguan_nav11_pano8_thumbnail"></value>
+            <value id="zhanguan_nav11_pano9_path"></value>
+            <value id="zhanguan_nav11_pano9_thumbnail"></value>
+            <value id="zhanguan_nav11_title"></value>
+            <value id="zhanguan_nav12_pano0_path"></value>
+            <value id="zhanguan_nav12_pano0_thumbnail"></value>
+            <value id="zhanguan_nav12_pano10_path"></value>
+            <value id="zhanguan_nav12_pano10_thumbnail"></value>
+            <value id="zhanguan_nav12_pano11_path"></value>
+            <value id="zhanguan_nav12_pano11_thumbnail"></value>
+            <value id="zhanguan_nav12_pano12_path"></value>
+            <value id="zhanguan_nav12_pano12_thumbnail"></value>
+            <value id="zhanguan_nav12_pano13_path"></value>
+            <value id="zhanguan_nav12_pano13_thumbnail"></value>
+            <value id="zhanguan_nav12_pano14_path"></value>
+            <value id="zhanguan_nav12_pano14_thumbnail"></value>
+            <value id="zhanguan_nav12_pano15_path"></value>
+            <value id="zhanguan_nav12_pano15_thumbnail"></value>
+            <value id="zhanguan_nav12_pano16_path"></value>
+            <value id="zhanguan_nav12_pano16_thumbnail"></value>
+            <value id="zhanguan_nav12_pano17_path"></value>
+            <value id="zhanguan_nav12_pano17_thumbnail"></value>
+            <value id="zhanguan_nav12_pano18_path"></value>
+            <value id="zhanguan_nav12_pano18_thumbnail"></value>
+            <value id="zhanguan_nav12_pano19_path"></value>
+            <value id="zhanguan_nav12_pano19_thumbnail"></value>
+            <value id="zhanguan_nav12_pano1_path"></value>
+            <value id="zhanguan_nav12_pano1_thumbnail"></value>
+            <value id="zhanguan_nav12_pano2_path"></value>
+            <value id="zhanguan_nav12_pano2_thumbnail"></value>
+            <value id="zhanguan_nav12_pano3_path"></value>
+            <value id="zhanguan_nav12_pano3_thumbnail"></value>
+            <value id="zhanguan_nav12_pano4_path"></value>
+            <value id="zhanguan_nav12_pano4_thumbnail"></value>
+            <value id="zhanguan_nav12_pano5_path"></value>
+            <value id="zhanguan_nav12_pano5_thumbnail"></value>
+            <value id="zhanguan_nav12_pano6_path"></value>
+            <value id="zhanguan_nav12_pano6_thumbnail"></value>
+            <value id="zhanguan_nav12_pano7_path"></value>
+            <value id="zhanguan_nav12_pano7_thumbnail"></value>
+            <value id="zhanguan_nav12_pano8_path"></value>
+            <value id="zhanguan_nav12_pano8_thumbnail"></value>
+            <value id="zhanguan_nav12_pano9_path"></value>
+            <value id="zhanguan_nav12_pano9_thumbnail"></value>
+            <value id="zhanguan_nav12_title"></value>
+            <value id="zhanguan_nav13_pano0_path"></value>
+            <value id="zhanguan_nav13_pano0_thumbnail"></value>
+            <value id="zhanguan_nav13_pano10_path"></value>
+            <value id="zhanguan_nav13_pano10_thumbnail"></value>
+            <value id="zhanguan_nav13_pano11_path"></value>
+            <value id="zhanguan_nav13_pano11_thumbnail"></value>
+            <value id="zhanguan_nav13_pano12_path"></value>
+            <value id="zhanguan_nav13_pano12_thumbnail"></value>
+            <value id="zhanguan_nav13_pano13_path"></value>
+            <value id="zhanguan_nav13_pano13_thumbnail"></value>
+            <value id="zhanguan_nav13_pano14_path"></value>
+            <value id="zhanguan_nav13_pano14_thumbnail"></value>
+            <value id="zhanguan_nav13_pano15_path"></value>
+            <value id="zhanguan_nav13_pano15_thumbnail"></value>
+            <value id="zhanguan_nav13_pano16_path"></value>
+            <value id="zhanguan_nav13_pano16_thumbnail"></value>
+            <value id="zhanguan_nav13_pano17_path"></value>
+            <value id="zhanguan_nav13_pano17_thumbnail"></value>
+            <value id="zhanguan_nav13_pano18_path"></value>
+            <value id="zhanguan_nav13_pano18_thumbnail"></value>
+            <value id="zhanguan_nav13_pano19_path"></value>
+            <value id="zhanguan_nav13_pano19_thumbnail"></value>
+            <value id="zhanguan_nav13_pano1_path"></value>
+            <value id="zhanguan_nav13_pano1_thumbnail"></value>
+            <value id="zhanguan_nav13_pano2_path"></value>
+            <value id="zhanguan_nav13_pano2_thumbnail"></value>
+            <value id="zhanguan_nav13_pano3_path"></value>
+            <value id="zhanguan_nav13_pano3_thumbnail"></value>
+            <value id="zhanguan_nav13_pano4_path"></value>
+            <value id="zhanguan_nav13_pano4_thumbnail"></value>
+            <value id="zhanguan_nav13_pano5_path"></value>
+            <value id="zhanguan_nav13_pano5_thumbnail"></value>
+            <value id="zhanguan_nav13_pano6_path"></value>
+            <value id="zhanguan_nav13_pano6_thumbnail"></value>
+            <value id="zhanguan_nav13_pano7_path"></value>
+            <value id="zhanguan_nav13_pano7_thumbnail"></value>
+            <value id="zhanguan_nav13_pano8_path"></value>
+            <value id="zhanguan_nav13_pano8_thumbnail"></value>
+            <value id="zhanguan_nav13_pano9_path"></value>
+            <value id="zhanguan_nav13_pano9_thumbnail"></value>
+            <value id="zhanguan_nav13_title"></value>
+            <value id="zhanguan_nav14_pano0_path"></value>
+            <value id="zhanguan_nav14_pano0_thumbnail"></value>
+            <value id="zhanguan_nav14_pano10_path"></value>
+            <value id="zhanguan_nav14_pano10_thumbnail"></value>
+            <value id="zhanguan_nav14_pano11_path"></value>
+            <value id="zhanguan_nav14_pano11_thumbnail"></value>
+            <value id="zhanguan_nav14_pano12_path"></value>
+            <value id="zhanguan_nav14_pano12_thumbnail"></value>
+            <value id="zhanguan_nav14_pano13_path"></value>
+            <value id="zhanguan_nav14_pano13_thumbnail"></value>
+            <value id="zhanguan_nav14_pano14_path"></value>
+            <value id="zhanguan_nav14_pano14_thumbnail"></value>
+            <value id="zhanguan_nav14_pano15_path"></value>
+            <value id="zhanguan_nav14_pano15_thumbnail"></value>
+            <value id="zhanguan_nav14_pano16_path"></value>
+            <value id="zhanguan_nav14_pano16_thumbnail"></value>
+            <value id="zhanguan_nav14_pano17_path"></value>
+            <value id="zhanguan_nav14_pano17_thumbnail"></value>
+            <value id="zhanguan_nav14_pano18_path"></value>
+            <value id="zhanguan_nav14_pano18_thumbnail"></value>
+            <value id="zhanguan_nav14_pano19_path"></value>
+            <value id="zhanguan_nav14_pano19_thumbnail"></value>
+            <value id="zhanguan_nav14_pano1_path"></value>
+            <value id="zhanguan_nav14_pano1_thumbnail"></value>
+            <value id="zhanguan_nav14_pano2_path"></value>
+            <value id="zhanguan_nav14_pano2_thumbnail"></value>
+            <value id="zhanguan_nav14_pano3_path"></value>
+            <value id="zhanguan_nav14_pano3_thumbnail"></value>
+            <value id="zhanguan_nav14_pano4_path"></value>
+            <value id="zhanguan_nav14_pano4_thumbnail"></value>
+            <value id="zhanguan_nav14_pano5_path"></value>
+            <value id="zhanguan_nav14_pano5_thumbnail"></value>
+            <value id="zhanguan_nav14_pano6_path"></value>
+            <value id="zhanguan_nav14_pano6_thumbnail"></value>
+            <value id="zhanguan_nav14_pano7_path"></value>
+            <value id="zhanguan_nav14_pano7_thumbnail"></value>
+            <value id="zhanguan_nav14_pano8_path"></value>
+            <value id="zhanguan_nav14_pano8_thumbnail"></value>
+            <value id="zhanguan_nav14_pano9_path"></value>
+            <value id="zhanguan_nav14_pano9_thumbnail"></value>
+            <value id="zhanguan_nav14_title"></value>
+            <value id="zhanguan_nav15_pano0_path"></value>
+            <value id="zhanguan_nav15_pano0_thumbnail"></value>
+            <value id="zhanguan_nav15_pano10_path"></value>
+            <value id="zhanguan_nav15_pano10_thumbnail"></value>
+            <value id="zhanguan_nav15_pano11_path"></value>
+            <value id="zhanguan_nav15_pano11_thumbnail"></value>
+            <value id="zhanguan_nav15_pano12_path"></value>
+            <value id="zhanguan_nav15_pano12_thumbnail"></value>
+            <value id="zhanguan_nav15_pano13_path"></value>
+            <value id="zhanguan_nav15_pano13_thumbnail"></value>
+            <value id="zhanguan_nav15_pano14_path"></value>
+            <value id="zhanguan_nav15_pano14_thumbnail"></value>
+            <value id="zhanguan_nav15_pano15_path"></value>
+            <value id="zhanguan_nav15_pano15_thumbnail"></value>
+            <value id="zhanguan_nav15_pano16_path"></value>
+            <value id="zhanguan_nav15_pano16_thumbnail"></value>
+            <value id="zhanguan_nav15_pano17_path"></value>
+            <value id="zhanguan_nav15_pano17_thumbnail"></value>
+            <value id="zhanguan_nav15_pano18_path"></value>
+            <value id="zhanguan_nav15_pano18_thumbnail"></value>
+            <value id="zhanguan_nav15_pano19_path"></value>
+            <value id="zhanguan_nav15_pano19_thumbnail"></value>
+            <value id="zhanguan_nav15_pano1_path"></value>
+            <value id="zhanguan_nav15_pano1_thumbnail"></value>
+            <value id="zhanguan_nav15_pano2_path"></value>
+            <value id="zhanguan_nav15_pano2_thumbnail"></value>
+            <value id="zhanguan_nav15_pano3_path"></value>
+            <value id="zhanguan_nav15_pano3_thumbnail"></value>
+            <value id="zhanguan_nav15_pano4_path"></value>
+            <value id="zhanguan_nav15_pano4_thumbnail"></value>
+            <value id="zhanguan_nav15_pano5_path"></value>
+            <value id="zhanguan_nav15_pano5_thumbnail"></value>
+            <value id="zhanguan_nav15_pano6_path"></value>
+            <value id="zhanguan_nav15_pano6_thumbnail"></value>
+            <value id="zhanguan_nav15_pano7_path"></value>
+            <value id="zhanguan_nav15_pano7_thumbnail"></value>
+            <value id="zhanguan_nav15_pano8_path"></value>
+            <value id="zhanguan_nav15_pano8_thumbnail"></value>
+            <value id="zhanguan_nav15_pano9_path"></value>
+            <value id="zhanguan_nav15_pano9_thumbnail"></value>
+            <value id="zhanguan_nav15_title"></value>
+            <value id="zhanguan_nav16_pano0_path"></value>
+            <value id="zhanguan_nav16_pano0_thumbnail"></value>
+            <value id="zhanguan_nav16_pano10_path"></value>
+            <value id="zhanguan_nav16_pano10_thumbnail"></value>
+            <value id="zhanguan_nav16_pano11_path"></value>
+            <value id="zhanguan_nav16_pano11_thumbnail"></value>
+            <value id="zhanguan_nav16_pano12_path"></value>
+            <value id="zhanguan_nav16_pano12_thumbnail"></value>
+            <value id="zhanguan_nav16_pano13_path"></value>
+            <value id="zhanguan_nav16_pano13_thumbnail"></value>
+            <value id="zhanguan_nav16_pano14_path"></value>
+            <value id="zhanguan_nav16_pano14_thumbnail"></value>
+            <value id="zhanguan_nav16_pano15_path"></value>
+            <value id="zhanguan_nav16_pano15_thumbnail"></value>
+            <value id="zhanguan_nav16_pano16_path"></value>
+            <value id="zhanguan_nav16_pano16_thumbnail"></value>
+            <value id="zhanguan_nav16_pano17_path"></value>
+            <value id="zhanguan_nav16_pano17_thumbnail"></value>
+            <value id="zhanguan_nav16_pano18_path"></value>
+            <value id="zhanguan_nav16_pano18_thumbnail"></value>
+            <value id="zhanguan_nav16_pano19_path"></value>
+            <value id="zhanguan_nav16_pano19_thumbnail"></value>
+            <value id="zhanguan_nav16_pano1_path"></value>
+            <value id="zhanguan_nav16_pano1_thumbnail"></value>
+            <value id="zhanguan_nav16_pano2_path"></value>
+            <value id="zhanguan_nav16_pano2_thumbnail"></value>
+            <value id="zhanguan_nav16_pano3_path"></value>
+            <value id="zhanguan_nav16_pano3_thumbnail"></value>
+            <value id="zhanguan_nav16_pano4_path"></value>
+            <value id="zhanguan_nav16_pano4_thumbnail"></value>
+            <value id="zhanguan_nav16_pano5_path"></value>
+            <value id="zhanguan_nav16_pano5_thumbnail"></value>
+            <value id="zhanguan_nav16_pano6_path"></value>
+            <value id="zhanguan_nav16_pano6_thumbnail"></value>
+            <value id="zhanguan_nav16_pano7_path"></value>
+            <value id="zhanguan_nav16_pano7_thumbnail"></value>
+            <value id="zhanguan_nav16_pano8_path"></value>
+            <value id="zhanguan_nav16_pano8_thumbnail"></value>
+            <value id="zhanguan_nav16_pano9_path"></value>
+            <value id="zhanguan_nav16_pano9_thumbnail"></value>
+            <value id="zhanguan_nav16_title"></value>
+            <value id="zhanguan_nav17_pano0_path"></value>
+            <value id="zhanguan_nav17_pano0_thumbnail"></value>
+            <value id="zhanguan_nav17_pano10_path"></value>
+            <value id="zhanguan_nav17_pano10_thumbnail"></value>
+            <value id="zhanguan_nav17_pano11_path"></value>
+            <value id="zhanguan_nav17_pano11_thumbnail"></value>
+            <value id="zhanguan_nav17_pano12_path"></value>
+            <value id="zhanguan_nav17_pano12_thumbnail"></value>
+            <value id="zhanguan_nav17_pano13_path"></value>
+            <value id="zhanguan_nav17_pano13_thumbnail"></value>
+            <value id="zhanguan_nav17_pano14_path"></value>
+            <value id="zhanguan_nav17_pano14_thumbnail"></value>
+            <value id="zhanguan_nav17_pano15_path"></value>
+            <value id="zhanguan_nav17_pano15_thumbnail"></value>
+            <value id="zhanguan_nav17_pano16_path"></value>
+            <value id="zhanguan_nav17_pano16_thumbnail"></value>
+            <value id="zhanguan_nav17_pano17_path"></value>
+            <value id="zhanguan_nav17_pano17_thumbnail"></value>
+            <value id="zhanguan_nav17_pano18_path"></value>
+            <value id="zhanguan_nav17_pano18_thumbnail"></value>
+            <value id="zhanguan_nav17_pano19_path"></value>
+            <value id="zhanguan_nav17_pano19_thumbnail"></value>
+            <value id="zhanguan_nav17_pano1_path"></value>
+            <value id="zhanguan_nav17_pano1_thumbnail"></value>
+            <value id="zhanguan_nav17_pano2_path"></value>
+            <value id="zhanguan_nav17_pano2_thumbnail"></value>
+            <value id="zhanguan_nav17_pano3_path"></value>
+            <value id="zhanguan_nav17_pano3_thumbnail"></value>
+            <value id="zhanguan_nav17_pano4_path"></value>
+            <value id="zhanguan_nav17_pano4_thumbnail"></value>
+            <value id="zhanguan_nav17_pano5_path"></value>
+            <value id="zhanguan_nav17_pano5_thumbnail"></value>
+            <value id="zhanguan_nav17_pano6_path"></value>
+            <value id="zhanguan_nav17_pano6_thumbnail"></value>
+            <value id="zhanguan_nav17_pano7_path"></value>
+            <value id="zhanguan_nav17_pano7_thumbnail"></value>
+            <value id="zhanguan_nav17_pano8_path"></value>
+            <value id="zhanguan_nav17_pano8_thumbnail"></value>
+            <value id="zhanguan_nav17_pano9_path"></value>
+            <value id="zhanguan_nav17_pano9_thumbnail"></value>
+            <value id="zhanguan_nav17_title"></value>
+            <value id="zhanguan_nav18_pano0_path"></value>
+            <value id="zhanguan_nav18_pano0_thumbnail"></value>
+            <value id="zhanguan_nav18_pano10_path"></value>
+            <value id="zhanguan_nav18_pano10_thumbnail"></value>
+            <value id="zhanguan_nav18_pano11_path"></value>
+            <value id="zhanguan_nav18_pano11_thumbnail"></value>
+            <value id="zhanguan_nav18_pano12_path"></value>
+            <value id="zhanguan_nav18_pano12_thumbnail"></value>
+            <value id="zhanguan_nav18_pano13_path"></value>
+            <value id="zhanguan_nav18_pano13_thumbnail"></value>
+            <value id="zhanguan_nav18_pano14_path"></value>
+            <value id="zhanguan_nav18_pano14_thumbnail"></value>
+            <value id="zhanguan_nav18_pano15_path"></value>
+            <value id="zhanguan_nav18_pano15_thumbnail"></value>
+            <value id="zhanguan_nav18_pano16_path"></value>
+            <value id="zhanguan_nav18_pano16_thumbnail"></value>
+            <value id="zhanguan_nav18_pano17_path"></value>
+            <value id="zhanguan_nav18_pano17_thumbnail"></value>
+            <value id="zhanguan_nav18_pano18_path"></value>
+            <value id="zhanguan_nav18_pano18_thumbnail"></value>
+            <value id="zhanguan_nav18_pano19_path"></value>
+            <value id="zhanguan_nav18_pano19_thumbnail"></value>
+            <value id="zhanguan_nav18_pano1_path"></value>
+            <value id="zhanguan_nav18_pano1_thumbnail"></value>
+            <value id="zhanguan_nav18_pano2_path"></value>
+            <value id="zhanguan_nav18_pano2_thumbnail"></value>
+            <value id="zhanguan_nav18_pano3_path"></value>
+            <value id="zhanguan_nav18_pano3_thumbnail"></value>
+            <value id="zhanguan_nav18_pano4_path"></value>
+            <value id="zhanguan_nav18_pano4_thumbnail"></value>
+            <value id="zhanguan_nav18_pano5_path"></value>
+            <value id="zhanguan_nav18_pano5_thumbnail"></value>
+            <value id="zhanguan_nav18_pano6_path"></value>
+            <value id="zhanguan_nav18_pano6_thumbnail"></value>
+            <value id="zhanguan_nav18_pano7_path"></value>
+            <value id="zhanguan_nav18_pano7_thumbnail"></value>
+            <value id="zhanguan_nav18_pano8_path"></value>
+            <value id="zhanguan_nav18_pano8_thumbnail"></value>
+            <value id="zhanguan_nav18_pano9_path"></value>
+            <value id="zhanguan_nav18_pano9_thumbnail"></value>
+            <value id="zhanguan_nav18_title"></value>
+            <value id="zhanguan_nav19_pano0_path"></value>
+            <value id="zhanguan_nav19_pano0_thumbnail"></value>
+            <value id="zhanguan_nav19_pano10_path"></value>
+            <value id="zhanguan_nav19_pano10_thumbnail"></value>
+            <value id="zhanguan_nav19_pano11_path"></value>
+            <value id="zhanguan_nav19_pano11_thumbnail"></value>
+            <value id="zhanguan_nav19_pano12_path"></value>
+            <value id="zhanguan_nav19_pano12_thumbnail"></value>
+            <value id="zhanguan_nav19_pano13_path"></value>
+            <value id="zhanguan_nav19_pano13_thumbnail"></value>
+            <value id="zhanguan_nav19_pano14_path"></value>
+            <value id="zhanguan_nav19_pano14_thumbnail"></value>
+            <value id="zhanguan_nav19_pano15_path"></value>
+            <value id="zhanguan_nav19_pano15_thumbnail"></value>
+            <value id="zhanguan_nav19_pano16_path"></value>
+            <value id="zhanguan_nav19_pano16_thumbnail"></value>
+            <value id="zhanguan_nav19_pano17_path"></value>
+            <value id="zhanguan_nav19_pano17_thumbnail"></value>
+            <value id="zhanguan_nav19_pano18_path"></value>
+            <value id="zhanguan_nav19_pano18_thumbnail"></value>
+            <value id="zhanguan_nav19_pano19_path"></value>
+            <value id="zhanguan_nav19_pano19_thumbnail"></value>
+            <value id="zhanguan_nav19_pano1_path"></value>
+            <value id="zhanguan_nav19_pano1_thumbnail"></value>
+            <value id="zhanguan_nav19_pano2_path"></value>
+            <value id="zhanguan_nav19_pano2_thumbnail"></value>
+            <value id="zhanguan_nav19_pano3_path"></value>
+            <value id="zhanguan_nav19_pano3_thumbnail"></value>
+            <value id="zhanguan_nav19_pano4_path"></value>
+            <value id="zhanguan_nav19_pano4_thumbnail"></value>
+            <value id="zhanguan_nav19_pano5_path"></value>
+            <value id="zhanguan_nav19_pano5_thumbnail"></value>
+            <value id="zhanguan_nav19_pano6_path"></value>
+            <value id="zhanguan_nav19_pano6_thumbnail"></value>
+            <value id="zhanguan_nav19_pano7_path"></value>
+            <value id="zhanguan_nav19_pano7_thumbnail"></value>
+            <value id="zhanguan_nav19_pano8_path"></value>
+            <value id="zhanguan_nav19_pano8_thumbnail"></value>
+            <value id="zhanguan_nav19_pano9_path"></value>
+            <value id="zhanguan_nav19_pano9_thumbnail"></value>
+            <value id="zhanguan_nav19_title"></value>
+            <value id="zhanguan_nav1_pano0_path">swf/f201.swf</value>
+            <value id="zhanguan_nav1_pano0_thumbnail">image/tupian/f201.png</value>
+            <value id="zhanguan_nav1_pano10_path"></value>
+            <value id="zhanguan_nav1_pano10_thumbnail"></value>
+            <value id="zhanguan_nav1_pano11_path"></value>
+            <value id="zhanguan_nav1_pano11_thumbnail"></value>
+            <value id="zhanguan_nav1_pano12_path"></value>
+            <value id="zhanguan_nav1_pano12_thumbnail"></value>
+            <value id="zhanguan_nav1_pano13_path"></value>
+            <value id="zhanguan_nav1_pano13_thumbnail"></value>
+            <value id="zhanguan_nav1_pano14_path"></value>
+            <value id="zhanguan_nav1_pano14_thumbnail"></value>
+            <value id="zhanguan_nav1_pano15_path"></value>
+            <value id="zhanguan_nav1_pano15_thumbnail"></value>
+            <value id="zhanguan_nav1_pano16_path"></value>
+            <value id="zhanguan_nav1_pano16_thumbnail"></value>
+            <value id="zhanguan_nav1_pano17_path"></value>
+            <value id="zhanguan_nav1_pano17_thumbnail"></value>
+            <value id="zhanguan_nav1_pano18_path"></value>
+            <value id="zhanguan_nav1_pano18_thumbnail"></value>
+            <value id="zhanguan_nav1_pano19_path"></value>
+            <value id="zhanguan_nav1_pano19_thumbnail"></value>
+            <value id="zhanguan_nav1_pano1_path">swf/f202.swf</value>
+            <value id="zhanguan_nav1_pano1_thumbnail">image/tupian/f202.png</value>
+            <value id="zhanguan_nav1_pano2_path">swf/f203.swf</value>
+            <value id="zhanguan_nav1_pano2_thumbnail">image/tupian/f203.png</value>
+            <value id="zhanguan_nav1_pano3_path"></value>
+            <value id="zhanguan_nav1_pano3_thumbnail"></value>
+            <value id="zhanguan_nav1_pano4_path"></value>
+            <value id="zhanguan_nav1_pano4_thumbnail"></value>
+            <value id="zhanguan_nav1_pano5_path"></value>
+            <value id="zhanguan_nav1_pano5_thumbnail"></value>
+            <value id="zhanguan_nav1_pano6_path"></value>
+            <value id="zhanguan_nav1_pano6_thumbnail"></value>
+            <value id="zhanguan_nav1_pano7_path"></value>
+            <value id="zhanguan_nav1_pano7_thumbnail"></value>
+            <value id="zhanguan_nav1_pano8_path"></value>
+            <value id="zhanguan_nav1_pano8_thumbnail"></value>
+            <value id="zhanguan_nav1_pano9_path"></value>
+            <value id="zhanguan_nav1_pano9_thumbnail"></value>
+            <value id="zhanguan_nav1_title">最新展厅</value>
+            <value id="zhanguan_nav2_pano0_path">swf/f301.swf</value>
+            <value id="zhanguan_nav2_pano0_thumbnail"></value>
+            <value id="zhanguan_nav2_pano10_path"></value>
+            <value id="zhanguan_nav2_pano10_thumbnail"></value>
+            <value id="zhanguan_nav2_pano11_path"></value>
+            <value id="zhanguan_nav2_pano11_thumbnail"></value>
+            <value id="zhanguan_nav2_pano12_path"></value>
+            <value id="zhanguan_nav2_pano12_thumbnail"></value>
+            <value id="zhanguan_nav2_pano13_path"></value>
+            <value id="zhanguan_nav2_pano13_thumbnail"></value>
+            <value id="zhanguan_nav2_pano14_path"></value>
+            <value id="zhanguan_nav2_pano14_thumbnail"></value>
+            <value id="zhanguan_nav2_pano15_path"></value>
+            <value id="zhanguan_nav2_pano15_thumbnail"></value>
+            <value id="zhanguan_nav2_pano16_path"></value>
+            <value id="zhanguan_nav2_pano16_thumbnail"></value>
+            <value id="zhanguan_nav2_pano17_path"></value>
+            <value id="zhanguan_nav2_pano17_thumbnail"></value>
+            <value id="zhanguan_nav2_pano18_path"></value>
+            <value id="zhanguan_nav2_pano18_thumbnail"></value>
+            <value id="zhanguan_nav2_pano19_path"></value>
+            <value id="zhanguan_nav2_pano19_thumbnail"></value>
+            <value id="zhanguan_nav2_pano1_path">swf/f302.swf</value>
+            <value id="zhanguan_nav2_pano1_thumbnail"></value>
+            <value id="zhanguan_nav2_pano2_path">swf/f303.swf</value>
+            <value id="zhanguan_nav2_pano2_thumbnail"></value>
+            <value id="zhanguan_nav2_pano3_path"></value>
+            <value id="zhanguan_nav2_pano3_thumbnail"></value>
+            <value id="zhanguan_nav2_pano4_path"></value>
+            <value id="zhanguan_nav2_pano4_thumbnail"></value>
+            <value id="zhanguan_nav2_pano5_path"></value>
+            <value id="zhanguan_nav2_pano5_thumbnail"></value>
+            <value id="zhanguan_nav2_pano6_path"></value>
+            <value id="zhanguan_nav2_pano6_thumbnail"></value>
+            <value id="zhanguan_nav2_pano7_path"></value>
+            <value id="zhanguan_nav2_pano7_thumbnail"></value>
+            <value id="zhanguan_nav2_pano8_path"></value>
+            <value id="zhanguan_nav2_pano8_thumbnail"></value>
+            <value id="zhanguan_nav2_pano9_path"></value>
+            <value id="zhanguan_nav2_pano9_thumbnail"></value>
+            <value id="zhanguan_nav2_title">大厅</value>
+            <value id="zhanguan_nav3_pano0_path">swf/f401.swf</value>
+            <value id="zhanguan_nav3_pano0_thumbnail"></value>
+            <value id="zhanguan_nav3_pano10_path"></value>
+            <value id="zhanguan_nav3_pano10_thumbnail"></value>
+            <value id="zhanguan_nav3_pano11_path"></value>
+            <value id="zhanguan_nav3_pano11_thumbnail"></value>
+            <value id="zhanguan_nav3_pano12_path"></value>
+            <value id="zhanguan_nav3_pano12_thumbnail"></value>
+            <value id="zhanguan_nav3_pano13_path"></value>
+            <value id="zhanguan_nav3_pano13_thumbnail"></value>
+            <value id="zhanguan_nav3_pano14_path"></value>
+            <value id="zhanguan_nav3_pano14_thumbnail"></value>
+            <value id="zhanguan_nav3_pano15_path"></value>
+            <value id="zhanguan_nav3_pano15_thumbnail"></value>
+            <value id="zhanguan_nav3_pano16_path"></value>
+            <value id="zhanguan_nav3_pano16_thumbnail"></value>
+            <value id="zhanguan_nav3_pano17_path"></value>
+            <value id="zhanguan_nav3_pano17_thumbnail"></value>
+            <value id="zhanguan_nav3_pano18_path"></value>
+            <value id="zhanguan_nav3_pano18_thumbnail"></value>
+            <value id="zhanguan_nav3_pano19_path"></value>
+            <value id="zhanguan_nav3_pano19_thumbnail"></value>
+            <value id="zhanguan_nav3_pano1_path">swf/f402.swf</value>
+            <value id="zhanguan_nav3_pano1_thumbnail"></value>
+            <value id="zhanguan_nav3_pano2_path">swf/f403.swf</value>
+            <value id="zhanguan_nav3_pano2_thumbnail"></value>
+            <value id="zhanguan_nav3_pano3_path"></value>
+            <value id="zhanguan_nav3_pano3_thumbnail"></value>
+            <value id="zhanguan_nav3_pano4_path"></value>
+            <value id="zhanguan_nav3_pano4_thumbnail"></value>
+            <value id="zhanguan_nav3_pano5_path"></value>
+            <value id="zhanguan_nav3_pano5_thumbnail"></value>
+            <value id="zhanguan_nav3_pano6_path"></value>
+            <value id="zhanguan_nav3_pano6_thumbnail"></value>
+            <value id="zhanguan_nav3_pano7_path"></value>
+            <value id="zhanguan_nav3_pano7_thumbnail"></value>
+            <value id="zhanguan_nav3_pano8_path"></value>
+            <value id="zhanguan_nav3_pano8_thumbnail"></value>
+            <value id="zhanguan_nav3_pano9_path"></value>
+            <value id="zhanguan_nav3_pano9_thumbnail"></value>
+            <value id="zhanguan_nav3_title">科技</value>
+            <value id="zhanguan_nav4_pano0_path">swf/f501.swf</value>
+            <value id="zhanguan_nav4_pano0_thumbnail"></value>
+            <value id="zhanguan_nav4_pano10_path"></value>
+            <value id="zhanguan_nav4_pano10_thumbnail"></value>
+            <value id="zhanguan_nav4_pano11_path"></value>
+            <value id="zhanguan_nav4_pano11_thumbnail"></value>
+            <value id="zhanguan_nav4_pano12_path"></value>
+            <value id="zhanguan_nav4_pano12_thumbnail"></value>
+            <value id="zhanguan_nav4_pano13_path"></value>
+            <value id="zhanguan_nav4_pano13_thumbnail"></value>
+            <value id="zhanguan_nav4_pano14_path"></value>
+            <value id="zhanguan_nav4_pano14_thumbnail"></value>
+            <value id="zhanguan_nav4_pano15_path"></value>
+            <value id="zhanguan_nav4_pano15_thumbnail"></value>
+            <value id="zhanguan_nav4_pano16_path"></value>
+            <value id="zhanguan_nav4_pano16_thumbnail"></value>
+            <value id="zhanguan_nav4_pano17_path"></value>
+            <value id="zhanguan_nav4_pano17_thumbnail"></value>
+            <value id="zhanguan_nav4_pano18_path"></value>
+            <value id="zhanguan_nav4_pano18_thumbnail"></value>
+            <value id="zhanguan_nav4_pano19_path"></value>
+            <value id="zhanguan_nav4_pano19_thumbnail"></value>
+            <value id="zhanguan_nav4_pano1_path">swf/f502.swf</value>
+            <value id="zhanguan_nav4_pano1_thumbnail"></value>
+            <value id="zhanguan_nav4_pano2_path">swf/f503.swf</value>
+            <value id="zhanguan_nav4_pano2_thumbnail"></value>
+            <value id="zhanguan_nav4_pano3_path"></value>
+            <value id="zhanguan_nav4_pano3_thumbnail"></value>
+            <value id="zhanguan_nav4_pano4_path"></value>
+            <value id="zhanguan_nav4_pano4_thumbnail"></value>
+            <value id="zhanguan_nav4_pano5_path"></value>
+            <value id="zhanguan_nav4_pano5_thumbnail"></value>
+            <value id="zhanguan_nav4_pano6_path"></value>
+            <value id="zhanguan_nav4_pano6_thumbnail"></value>
+            <value id="zhanguan_nav4_pano7_path"></value>
+            <value id="zhanguan_nav4_pano7_thumbnail"></value>
+            <value id="zhanguan_nav4_pano8_path"></value>
+            <value id="zhanguan_nav4_pano8_thumbnail"></value>
+            <value id="zhanguan_nav4_pano9_path"></value>
+            <value id="zhanguan_nav4_pano9_thumbnail"></value>
+            <value id="zhanguan_nav4_title">现代</value>
+            <value id="zhanguan_nav5_pano0_path">swf/f601.swf</value>
+            <value id="zhanguan_nav5_pano0_thumbnail"></value>
+            <value id="zhanguan_nav5_pano10_path"></value>
+            <value id="zhanguan_nav5_pano10_thumbnail"></value>
+            <value id="zhanguan_nav5_pano11_path"></value>
+            <value id="zhanguan_nav5_pano11_thumbnail"></value>
+            <value id="zhanguan_nav5_pano12_path"></value>
+            <value id="zhanguan_nav5_pano12_thumbnail"></value>
+            <value id="zhanguan_nav5_pano13_path"></value>
+            <value id="zhanguan_nav5_pano13_thumbnail"></value>
+            <value id="zhanguan_nav5_pano14_path"></value>
+            <value id="zhanguan_nav5_pano14_thumbnail"></value>
+            <value id="zhanguan_nav5_pano15_path"></value>
+            <value id="zhanguan_nav5_pano15_thumbnail"></value>
+            <value id="zhanguan_nav5_pano16_path"></value>
+            <value id="zhanguan_nav5_pano16_thumbnail"></value>
+            <value id="zhanguan_nav5_pano17_path"></value>
+            <value id="zhanguan_nav5_pano17_thumbnail"></value>
+            <value id="zhanguan_nav5_pano18_path"></value>
+            <value id="zhanguan_nav5_pano18_thumbnail"></value>
+            <value id="zhanguan_nav5_pano19_path"></value>
+            <value id="zhanguan_nav5_pano19_thumbnail"></value>
+            <value id="zhanguan_nav5_pano1_path">swf/f602.swf</value>
+            <value id="zhanguan_nav5_pano1_thumbnail"></value>
+            <value id="zhanguan_nav5_pano2_path">swf/f603.swf</value>
+            <value id="zhanguan_nav5_pano2_thumbnail"></value>
+            <value id="zhanguan_nav5_pano3_path"></value>
+            <value id="zhanguan_nav5_pano3_thumbnail"></value>
+            <value id="zhanguan_nav5_pano4_path"></value>
+            <value id="zhanguan_nav5_pano4_thumbnail"></value>
+            <value id="zhanguan_nav5_pano5_path"></value>
+            <value id="zhanguan_nav5_pano5_thumbnail"></value>
+            <value id="zhanguan_nav5_pano6_path"></value>
+            <value id="zhanguan_nav5_pano6_thumbnail"></value>
+            <value id="zhanguan_nav5_pano7_path"></value>
+            <value id="zhanguan_nav5_pano7_thumbnail"></value>
+            <value id="zhanguan_nav5_pano8_path"></value>
+            <value id="zhanguan_nav5_pano8_thumbnail"></value>
+            <value id="zhanguan_nav5_pano9_path"></value>
+            <value id="zhanguan_nav5_pano9_thumbnail"></value>
+            <value id="zhanguan_nav5_title">中式</value>
+            <value id="zhanguan_nav6_pano0_path">swf/f701.swf</value>
+            <value id="zhanguan_nav6_pano0_thumbnail"></value>
+            <value id="zhanguan_nav6_pano10_path"></value>
+            <value id="zhanguan_nav6_pano10_thumbnail"></value>
+            <value id="zhanguan_nav6_pano11_path"></value>
+            <value id="zhanguan_nav6_pano11_thumbnail"></value>
+            <value id="zhanguan_nav6_pano12_path"></value>
+            <value id="zhanguan_nav6_pano12_thumbnail"></value>
+            <value id="zhanguan_nav6_pano13_path"></value>
+            <value id="zhanguan_nav6_pano13_thumbnail"></value>
+            <value id="zhanguan_nav6_pano14_path"></value>
+            <value id="zhanguan_nav6_pano14_thumbnail"></value>
+            <value id="zhanguan_nav6_pano15_path"></value>
+            <value id="zhanguan_nav6_pano15_thumbnail"></value>
+            <value id="zhanguan_nav6_pano16_path"></value>
+            <value id="zhanguan_nav6_pano16_thumbnail"></value>
+            <value id="zhanguan_nav6_pano17_path"></value>
+            <value id="zhanguan_nav6_pano17_thumbnail"></value>
+            <value id="zhanguan_nav6_pano18_path"></value>
+            <value id="zhanguan_nav6_pano18_thumbnail"></value>
+            <value id="zhanguan_nav6_pano19_path"></value>
+            <value id="zhanguan_nav6_pano19_thumbnail"></value>
+            <value id="zhanguan_nav6_pano1_path">swf/f702.swf</value>
+            <value id="zhanguan_nav6_pano1_thumbnail"></value>
+            <value id="zhanguan_nav6_pano2_path">swf/f703.swf</value>
+            <value id="zhanguan_nav6_pano2_thumbnail"></value>
+            <value id="zhanguan_nav6_pano3_path"></value>
+            <value id="zhanguan_nav6_pano3_thumbnail"></value>
+            <value id="zhanguan_nav6_pano4_path"></value>
+            <value id="zhanguan_nav6_pano4_thumbnail"></value>
+            <value id="zhanguan_nav6_pano5_path"></value>
+            <value id="zhanguan_nav6_pano5_thumbnail"></value>
+            <value id="zhanguan_nav6_pano6_path"></value>
+            <value id="zhanguan_nav6_pano6_thumbnail"></value>
+            <value id="zhanguan_nav6_pano7_path"></value>
+            <value id="zhanguan_nav6_pano7_thumbnail"></value>
+            <value id="zhanguan_nav6_pano8_path"></value>
+            <value id="zhanguan_nav6_pano8_thumbnail"></value>
+            <value id="zhanguan_nav6_pano9_path"></value>
+            <value id="zhanguan_nav6_pano9_thumbnail"></value>
+            <value id="zhanguan_nav6_title">写实</value>
+            <value id="zhanguan_nav7_pano0_path">swf/f801.swf</value>
+            <value id="zhanguan_nav7_pano0_thumbnail"></value>
+            <value id="zhanguan_nav7_pano10_path"></value>
+            <value id="zhanguan_nav7_pano10_thumbnail"></value>
+            <value id="zhanguan_nav7_pano11_path"></value>
+            <value id="zhanguan_nav7_pano11_thumbnail"></value>
+            <value id="zhanguan_nav7_pano12_path"></value>
+            <value id="zhanguan_nav7_pano12_thumbnail"></value>
+            <value id="zhanguan_nav7_pano13_path"></value>
+            <value id="zhanguan_nav7_pano13_thumbnail"></value>
+            <value id="zhanguan_nav7_pano14_path"></value>
+            <value id="zhanguan_nav7_pano14_thumbnail"></value>
+            <value id="zhanguan_nav7_pano15_path"></value>
+            <value id="zhanguan_nav7_pano15_thumbnail"></value>
+            <value id="zhanguan_nav7_pano16_path"></value>
+            <value id="zhanguan_nav7_pano16_thumbnail"></value>
+            <value id="zhanguan_nav7_pano17_path"></value>
+            <value id="zhanguan_nav7_pano17_thumbnail"></value>
+            <value id="zhanguan_nav7_pano18_path"></value>
+            <value id="zhanguan_nav7_pano18_thumbnail"></value>
+            <value id="zhanguan_nav7_pano19_path"></value>
+            <value id="zhanguan_nav7_pano19_thumbnail"></value>
+            <value id="zhanguan_nav7_pano1_path">swf/f802.swf</value>
+            <value id="zhanguan_nav7_pano1_thumbnail"></value>
+            <value id="zhanguan_nav7_pano2_path">swf/f803.swf</value>
+            <value id="zhanguan_nav7_pano2_thumbnail"></value>
+            <value id="zhanguan_nav7_pano3_path"></value>
+            <value id="zhanguan_nav7_pano3_thumbnail"></value>
+            <value id="zhanguan_nav7_pano4_path"></value>
+            <value id="zhanguan_nav7_pano4_thumbnail"></value>
+            <value id="zhanguan_nav7_pano5_path"></value>
+            <value id="zhanguan_nav7_pano5_thumbnail"></value>
+            <value id="zhanguan_nav7_pano6_path"></value>
+            <value id="zhanguan_nav7_pano6_thumbnail"></value>
+            <value id="zhanguan_nav7_pano7_path"></value>
+            <value id="zhanguan_nav7_pano7_thumbnail"></value>
+            <value id="zhanguan_nav7_pano8_path"></value>
+            <value id="zhanguan_nav7_pano8_thumbnail"></value>
+            <value id="zhanguan_nav7_pano9_path"></value>
+            <value id="zhanguan_nav7_pano9_thumbnail"></value>
+            <value id="zhanguan_nav7_title">其他</value>
+            <value id="zhanguan_nav8_pano0_path"></value>
+            <value id="zhanguan_nav8_pano0_thumbnail"></value>
+            <value id="zhanguan_nav8_pano10_path"></value>
+            <value id="zhanguan_nav8_pano10_thumbnail"></value>
+            <value id="zhanguan_nav8_pano11_path"></value>
+            <value id="zhanguan_nav8_pano11_thumbnail"></value>
+            <value id="zhanguan_nav8_pano12_path"></value>
+            <value id="zhanguan_nav8_pano12_thumbnail"></value>
+            <value id="zhanguan_nav8_pano13_path"></value>
+            <value id="zhanguan_nav8_pano13_thumbnail"></value>
+            <value id="zhanguan_nav8_pano14_path"></value>
+            <value id="zhanguan_nav8_pano14_thumbnail"></value>
+            <value id="zhanguan_nav8_pano15_path"></value>
+            <value id="zhanguan_nav8_pano15_thumbnail"></value>
+            <value id="zhanguan_nav8_pano16_path"></value>
+            <value id="zhanguan_nav8_pano16_thumbnail"></value>
+            <value id="zhanguan_nav8_pano17_path"></value>
+            <value id="zhanguan_nav8_pano17_thumbnail"></value>
+            <value id="zhanguan_nav8_pano18_path"></value>
+            <value id="zhanguan_nav8_pano18_thumbnail"></value>
+            <value id="zhanguan_nav8_pano19_path"></value>
+            <value id="zhanguan_nav8_pano19_thumbnail"></value>
+            <value id="zhanguan_nav8_pano1_path"></value>
+            <value id="zhanguan_nav8_pano1_thumbnail"></value>
+            <value id="zhanguan_nav8_pano2_path"></value>
+            <value id="zhanguan_nav8_pano2_thumbnail"></value>
+            <value id="zhanguan_nav8_pano3_path"></value>
+            <value id="zhanguan_nav8_pano3_thumbnail"></value>
+            <value id="zhanguan_nav8_pano4_path"></value>
+            <value id="zhanguan_nav8_pano4_thumbnail"></value>
+            <value id="zhanguan_nav8_pano5_path"></value>
+            <value id="zhanguan_nav8_pano5_thumbnail"></value>
+            <value id="zhanguan_nav8_pano6_path"></value>
+            <value id="zhanguan_nav8_pano6_thumbnail"></value>
+            <value id="zhanguan_nav8_pano7_path"></value>
+            <value id="zhanguan_nav8_pano7_thumbnail"></value>
+            <value id="zhanguan_nav8_pano8_path"></value>
+            <value id="zhanguan_nav8_pano8_thumbnail"></value>
+            <value id="zhanguan_nav8_pano9_path"></value>
+            <value id="zhanguan_nav8_pano9_thumbnail"></value>
+            <value id="zhanguan_nav8_title"></value>
+            <value id="zhanguan_nav9_pano0_path"></value>
+            <value id="zhanguan_nav9_pano0_thumbnail"></value>
+            <value id="zhanguan_nav9_pano10_path"></value>
+            <value id="zhanguan_nav9_pano10_thumbnail"></value>
+            <value id="zhanguan_nav9_pano11_path"></value>
+            <value id="zhanguan_nav9_pano11_thumbnail"></value>
+            <value id="zhanguan_nav9_pano12_path"></value>
+            <value id="zhanguan_nav9_pano12_thumbnail"></value>
+            <value id="zhanguan_nav9_pano13_path"></value>
+            <value id="zhanguan_nav9_pano13_thumbnail"></value>
+            <value id="zhanguan_nav9_pano14_path"></value>
+            <value id="zhanguan_nav9_pano14_thumbnail"></value>
+            <value id="zhanguan_nav9_pano15_path"></value>
+            <value id="zhanguan_nav9_pano15_thumbnail"></value>
+            <value id="zhanguan_nav9_pano16_path"></value>
+            <value id="zhanguan_nav9_pano16_thumbnail"></value>
+            <value id="zhanguan_nav9_pano17_path"></value>
+            <value id="zhanguan_nav9_pano17_thumbnail"></value>
+            <value id="zhanguan_nav9_pano18_path"></value>
+            <value id="zhanguan_nav9_pano18_thumbnail"></value>
+            <value id="zhanguan_nav9_pano19_path"></value>
+            <value id="zhanguan_nav9_pano19_thumbnail"></value>
+            <value id="zhanguan_nav9_pano1_path"></value>
+            <value id="zhanguan_nav9_pano1_thumbnail"></value>
+            <value id="zhanguan_nav9_pano2_path"></value>
+            <value id="zhanguan_nav9_pano2_thumbnail"></value>
+            <value id="zhanguan_nav9_pano3_path"></value>
+            <value id="zhanguan_nav9_pano3_thumbnail"></value>
+            <value id="zhanguan_nav9_pano4_path"></value>
+            <value id="zhanguan_nav9_pano4_thumbnail"></value>
+            <value id="zhanguan_nav9_pano5_path"></value>
+            <value id="zhanguan_nav9_pano5_thumbnail"></value>
+            <value id="zhanguan_nav9_pano6_path"></value>
+            <value id="zhanguan_nav9_pano6_thumbnail"></value>
+            <value id="zhanguan_nav9_pano7_path"></value>
+            <value id="zhanguan_nav9_pano7_thumbnail"></value>
+            <value id="zhanguan_nav9_pano8_path"></value>
+            <value id="zhanguan_nav9_pano8_thumbnail"></value>
+            <value id="zhanguan_nav9_pano9_path"></value>
+            <value id="zhanguan_nav9_pano9_thumbnail"></value>
+            <value id="zhanguan_nav9_title"></value>
+          </values>
+        </html>
+        <facequality/>
+        <autorotate>
+          <enabled>0</enabled>
+          <speed>0.4</speed>
+          <delay>5</delay>
+          <returntohorizon>0</returntohorizon>
+          <afterloaded>0</afterloaded>
+          <onlyinfocus>0</onlyinfocus>
+          <nodedelay>0</nodedelay>
+          <noderandom>1</noderandom>
+        </autorotate>
+        <loading>
+          <text/>
+          <bar/>
+          <image/>
+        </loading>
+        <hotspottext>
+          <enabled>0</enabled>
+          <width>180</width>
+          <height>20</height>
+          <auto>0</auto>
+          <textcolor>#000000</textcolor>
+          <textwrap>1</textwrap>
+          <background>1</background>
+          <backgroundcolor>#ffffff</backgroundcolor>
+          <border>1</border>
+          <bordercolor>#000000</bordercolor>
+          <borderradius>1</borderradius>
+        </hotspottext>
+        <hotspotstyle>
+          <viewmode>hidden</viewmode>
+          <backgroundcolor>#0000ff,64</backgroundcolor>
+          <bordercolor>#0000ff</bordercolor>
+        </hotspotstyle>
+        <cursor>
+          <ownonmovement>1</ownonmovement>
+          <ownondefault>1</ownondefault>
+        </cursor>
+        <lock>
+          <domainenabled>0</domainenabled>
+          <domainmessage>wrong domain</domainmessage>
+          <dateenabled>0</dateenabled>
+          <date>2014-12-01</date>
+          <datemessage>expired</datemessage>
+        </lock>
+        <transition>
+          <enabled>0</enabled>
+          <transitiontype>crossdissolve</transitiontype>
+          <transitioncolor>#000000</transitioncolor>
+          <transitiontime>1</transitiontime>
+          <zoominenabled>1</zoominenabled>
+          <zoomoutenabled>1</zoomoutenabled>
+          <zoomoutwait>1</zoomoutwait>
+          <zoomfov>5</zoomfov>
+          <zoomspeed>2</zoomspeed>
+        </transition>
+        <filename>__fake__.swf</filename>
+        <quality>82</quality>
+        <subtiles>1</subtiles>
+        <externalimage>0</externalimage>
+        <cubefilename>images/$n_o.jpg</cubefilename>
+        <cubefacenaming>_5</cubefacenaming>
+        <windowwidth>11</windowwidth>
+        <windowheight>11</windowheight>
+        <scaling>stage</scaling>
+        <fovmode>vertical</fovmode>
+        <framerate>50</framerate>
+        <changestagequality>0</changestagequality>
+        <changesmoothing>0</changesmoothing>
+        <sensitivity>2</sensitivity>
+        <masssimulation>1</masssimulation>
+        <locked>0</locked>
+        <invertcontrol>0</invertcontrol>
+        <lockedwheel>0</lockedwheel>
+        <invertwheel>0</invertwheel>
+        <speedwheel>1</speedwheel>
+        <trapwheel>1</trapwheel>
+        <keyboardlocked>0</keyboardlocked>
+        <keyboardzoomlocked>0</keyboardzoomlocked>
+        <networkaccess>0</networkaccess>
+        <fullscreencontext>0</fullscreencontext>
+        <hideaboutbox>0</hideaboutbox>
+        <externalskin>0</externalskin>
+        <skinimagepath>images</skinimagepath>
+        <skinfile>simplex.ggsk</skinfile>
+        <leveltileenabled>0</leveltileenabled>
+        <leveltilesize>512</leveltilesize>
+        <leveltileformat>0</leveltileformat>
+        <leveltilefilename>tiles/$n/c%c_l%r_%y_%x.jpg</leveltilefilename>
+        <leveltilegeneratefiles>1</leveltilegeneratefiles>
+        <leveltileoverlap>1</leveltileoverlap>
+        <levelmemraw>300</levelmemraw>
+        <levelmembmp>200</levelmembmp>
+        <levelswitchbias>0.4</levelswitchbias>
+        <levelqueueraw>20</levelqueueraw>
+        <levelqueuebmp>5</levelqueuebmp>
+        <tilesize>11</tilesize>
+        <previewresolution>4</previewresolution>
+        <preview>grayscale</preview>
+        <previeworder>defaultview</previeworder>
+        <previewcolor>#808080</previewcolor>
+        <previewquality>25</previewquality>
+      </flash>
+    </output>
+    <input>
+      <patch/>
+    </input>
+    <viewingparameter>
+      <pan/>
+      <tilt/>
+      <fov/>
+    </viewingparameter>
+    <hotspots/>
+    <sounds/>
+  </panorama>
+</pano2vrconfig>
