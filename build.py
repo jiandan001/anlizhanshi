@@ -2,6 +2,7 @@
 
 import os
 import sys
+import time
 
 from jinja2 import Environment, loaders
 from jinja2._compat import PYPY, PY2
@@ -39,7 +40,8 @@ for item in os.listdir(ROOT_DIR):
 data = {
   "html_title": u"3D展厅模板",
   "item_list": item_list,
-  "count": len(item_list)
+  "count": len(item_list),
+  "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
 }
 
 #env = Environment(loader=filesystem_loader)
