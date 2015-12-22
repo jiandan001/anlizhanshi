@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+import json
 
 from jinja2 import Environment, loaders
 from jinja2._compat import PYPY, PY2
@@ -26,6 +27,14 @@ def _get_template_path():
 def _get_anli_path():
   here = os.path.dirname(os.path.abspath(__file__))
   return os.path.abspath(here)
+
+def _create_db(dic):
+  with open(os.path.join(_get_anli_path(), 'db.json'), 'w') as f:
+    json.dump(dic, f)
+
+def _read_db(path):
+  with open(os.path.join(_get_anli_path(), 'db.json')) as f:
+    return json.load(f)
 
 def _is_shouye(name):
   return (name.split('_')[-1].find("shouye") is not -1)
@@ -112,6 +121,9 @@ ROOT_DIR = _get_root_path()
 TEMPLATE_DIR = _get_template_path()
 ANLI_DIR = _get_anli_path()
 
+# Pager limit
+LIMIT = 20
+
 # Meta data for single html page.
 META = {
   "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
@@ -131,7 +143,30 @@ META = {
 #   }
 # }
 
+# DB = {
+# 
+#
+#
+#
+#
+#
+# Parse dir to create a json database.
+def _parse_dir():
+  for name in os.listdir(ROOT_DIR):
+    # Exclude not anli.
+    if not _is_anli_dir(name):
+      print ("[Warning] Not anli: " + name)
+      continue
+  
+    # Dir name is anli name.
+    anli_dir_name = name
+  return []
+
+dic = _parse_dir()
+_create_db(dic)
+
 # Loop anli dir to sort them.
+# Create database.
 fengge_dict = {}
 for name in os.listdir(ROOT_DIR):
   # Exclude not anli.
@@ -161,6 +196,9 @@ for fengge_key, fengge_item in fengge_dict.iteritems():
     "html_title": u"3D展厅模板 - " + fengge_item["name"],
     "item_list": item_list,
     "count": len(item_list),
+    "option": {
+      "limit": LIMIT
+    },
     "meta": META
   }
 
