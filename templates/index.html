@@ -99,9 +99,9 @@
       </div>
       <div class="floor_list" id="{{ fengge }}">
         {% for item in fengge_item.shouye_list %}
-        <div class='floor_item'>
-          <a target="_self" href="../{{ item }}/pano.swf">
-            <img src="../{{ item }}/pano.preview.jpg">
+        <div class='floor_item' data-order="{{ item[1]|e }}">
+          <a target="_self" href="../{{ item[0]|e }}/pano.swf">
+            <img src="../{{ item[0]|e }}/pano.preview.jpg">
           </a>
           <div class='exhibition_name'></div>
         </div><!-- /.floor_item -->

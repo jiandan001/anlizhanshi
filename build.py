@@ -41,9 +41,31 @@ def _get_fengge_name(k):
     "qita": u"其他"
   }.get(k, None)
 
+def _is_anli_dir(name):
+  # Only accept dir.
+  if not os.path.isdir(os.path.join(ROOT_DIR, name)):
+    return False
+  # Name validation
+  if name.find('_') is -1:
+    return False
+  return True
+
+def _get_shouye_order(name):
+  import re
+  p = re.compile("shouye([0-9]+)")
+  m = p.search(name)
+  if m:
+    return m.group(1)
+  else:
+    return "9999"
+
 # e.g. "keji" or "xiandai"
 def _get_fengge_key(anli_dir_name):
   return anli_dir_name.split('_')[1]
+
+def _get_created_date(dir_name):
+  (mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(os.path.join(ROOT_DIR, dir_name))
+  return ctime
 
 # dic = {
 #   "fengge_key": {
@@ -64,24 +86,27 @@ def _append_fengge_dict(dic, anli_dir_name):
     print("[Error] Failed to get fengge name in anli name: " + anli_dir_name)
     return False
 
+  dir_created_unix_time = _get_created_date(anli_dir_name) # int
+  dir_created_time = time.ctime(dir_created_unix_time)
+
   if fengge_key not in dic:
     dic[fengge_key] = {}
     dic[fengge_key]["name"] = fengge_name
     dic[fengge_key]["item_list"] = []
     dic[fengge_key]["shouye_list"] = []
 
-  dic[fengge_key]["item_list"].append(anli_dir_name)
-  if _is_shouye(anli_dir_name):
-    dic[fengge_key]["shouye_list"].append(anli_dir_name)
+  dic[fengge_key]["item_list"].append(
+    # dir_name      # dir_created_date
+    (anli_dir_name, dir_created_unix_time, str(dir_created_time))
+  )
+  dic[fengge_key]["item_list"] = sorted(dic[fengge_key]["item_list"], key=lambda item: item[1], reverse=True)
 
-def _is_anli_dir(name):
-  # Only accept dir.
-  if not os.path.isdir(os.path.join(ROOT_DIR, name)):
-    return False
-  # Name validation
-  if name.find('_') is -1:
-    return False
-  return True
+  if _is_shouye(anli_dir_name):
+    dic[fengge_key]["shouye_list"].append(
+      # dir_name      # order_number
+      (anli_dir_name, _get_shouye_order(anli_dir_name))
+    )
+    dic[fengge_key]["shouye_list"] = sorted(dic[fengge_key]["shouye_list"], key=lambda shouye: shouye[1])
 
 ROOT_DIR = _get_root_path()
 TEMPLATE_DIR = _get_template_path()
@@ -133,7 +158,7 @@ for fengge_key, fengge_item in fengge_dict.iteritems():
   item_list = fengge_item["item_list"]
 
   render_data = {
-    "html_title": u"3D展厅模板 - ",#TODO + fengge_item["name"].encode('utf8'),
+    "html_title": u"3D展厅模板 - " + fengge_item["name"],
     "item_list": item_list,
     "count": len(item_list),
     "meta": META
