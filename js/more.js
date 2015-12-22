@@ -19,7 +19,8 @@
 			cname = decodeURIComponent(cname);
 			getExhibitions.call(this, cid, cname, 1, true);
 			$(".home").click(function(){
-				window.location.href = "list.html";
+				//window.location.href = "list.html";
+				window.location.href = "index.html";
 			});
 	});
 		

@@ -13,7 +13,6 @@ def filesystem_loader():
   '''returns FileSystemLoader initialized to templates directory
   '''
   here = os.path.dirname(os.path.abspath(__file__))
-  print(here)
   return loaders.FileSystemLoader(here + '/templates')
 
 def _get_root_path():
@@ -32,7 +31,7 @@ def _create_db(dic):
   with open(os.path.join(_get_anli_path(), 'db.json'), 'w') as f:
     json.dump(dic, f)
 
-def _read_db(path):
+def _read_db():
   with open(os.path.join(_get_anli_path(), 'db.json')) as f:
     return json.load(f)
 
@@ -40,7 +39,10 @@ def _is_shouye(name):
   return (name.split('_')[-1].find("shouye") is not -1)
 
 # Convert "keji" to "科技"
-def _get_fengge_name(k):
+def _get_fengge_name(name):
+  return _fengge_name_table(_get_fengge_key(name))
+
+def _fengge_name_table(k):
   return {
     "keji": u"科技",
     "xiandai": u"现代",
@@ -76,47 +78,6 @@ def _get_created_date(dir_name):
   (mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(os.path.join(ROOT_DIR, dir_name))
   return ctime
 
-# dic = {
-#   "fengge_key": {
-#     "fengge_name": "科技",
-#     "item_list": [
-#       "keji_01_01"
-#     ],
-#     "shouye_list": [
-#       "keji_02_01_shouye"
-#     ]
-#   }
-# }
-def _append_fengge_dict(dic, anli_dir_name):
-
-  fengge_key = _get_fengge_key(anli_dir_name)
-  fengge_name = _get_fengge_name(fengge_key)
-  if fengge_name is None:
-    print("[Error] Failed to get fengge name in anli name: " + anli_dir_name)
-    return False
-
-  dir_created_unix_time = _get_created_date(anli_dir_name) # int
-  dir_created_time = time.ctime(dir_created_unix_time)
-
-  if fengge_key not in dic:
-    dic[fengge_key] = {}
-    dic[fengge_key]["name"] = fengge_name
-    dic[fengge_key]["item_list"] = []
-    dic[fengge_key]["shouye_list"] = []
-
-  dic[fengge_key]["item_list"].append(
-    # dir_name      # dir_created_date
-    (anli_dir_name, dir_created_unix_time, str(dir_created_time))
-  )
-  dic[fengge_key]["item_list"] = sorted(dic[fengge_key]["item_list"], key=lambda item: item[1], reverse=True)
-
-  if _is_shouye(anli_dir_name):
-    dic[fengge_key]["shouye_list"].append(
-      # dir_name      # order_number
-      (anli_dir_name, _get_shouye_order(anli_dir_name))
-    )
-    dic[fengge_key]["shouye_list"] = sorted(dic[fengge_key]["shouye_list"], key=lambda shouye: shouye[1])
-
 ROOT_DIR = _get_root_path()
 TEMPLATE_DIR = _get_template_path()
 ANLI_DIR = _get_anli_path()
@@ -129,93 +90,196 @@ META = {
   "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
 }
 
-# fengge_dict = {
-#   "keji": {
-#     "name": "科技",
-#     "item_list": [
-#       "keji_01_01",
-#       "keji_01_02"
-#     ],
-#     "shouye_list": [
-#       "keji_02_01_shouye",
-#       "keji_02_02_shouye"
-#     ]
-#   }
-# }
-
-# DB = {
-# 
-#
-#
-#
-#
-#
 # Parse dir to create a json database.
+# [{
+#   "id": "cx_xiandai_01_1",
+#   "fengge_key": "xiandai",
+#   "fengge_name": "XIANDAI",
+#   "unix_ctime": "123",
+#   "ctime": "2015..."
+# }]
 def _parse_dir():
+  table = []
   for name in os.listdir(ROOT_DIR):
     # Exclude not anli.
     if not _is_anli_dir(name):
       print ("[Warning] Not anli: " + name)
       continue
+
+    fengge_name = _get_fengge_name(name)
+    if fengge_name is None:
+      print("[Error] Failed to get fengge name in anli name: " + name)
+      continue
+
+    dir_created_unix_time = _get_created_date(name) # int
+    dir_created_time = time.ctime(dir_created_unix_time)
+
+    row = {
+      "id": name,
+      "fengge_name": fengge_name,
+      "fengge_key": _get_fengge_key(name),
+      "unix_ctime": dir_created_unix_time,
+      "ctime": dir_created_time
+    }
+
+    if _is_shouye(name):
+      row["shouye_order"] = _get_shouye_order(name)
+
+    table.append(row)
   
-    # Dir name is anli name.
-    anli_dir_name = name
-  return []
+  return table
 
 dic = _parse_dir()
 _create_db(dic)
 
-# Loop anli dir to sort them.
-# Create database.
+# Read data from database
+anli_table = _read_db()
+
+# Hold data needed to be rendered in one list.
+html_template_data = []
+
+# Create index.html template render data.
+# {
+#   "html_title": "",
+#   "fengge_dict": {
+#     "keji": {
+#       "name": "KEJI",
+#       "list": [
+#         ("cx_keji_01_1_shouye1", 1),
+#         ("cx_keji_02_1_shouye2", 2)
+#       ]
+#     }
+#   },
+#   "meta": {}
+# }
 fengge_dict = {}
-for name in os.listdir(ROOT_DIR):
-  # Exclude not anli.
-  if not _is_anli_dir(name):
-    print ("[Warning] Not anli: " + name)
+
+for anli in anli_table:
+  if "shouye_order" not in anli:
     continue
 
-  # Dir name is anli name.
-  anli_dir_name = name
+  anli_dir_name = anli["id"]
+  order = anli["shouye_order"]
+  fengge_key = _get_fengge_key(anli_dir_name)
 
-  _append_fengge_dict(fengge_dict, anli_dir_name)
+  # Create empty list when not exist.
+  if fengge_key not in fengge_dict:
+    fengge_dict[fengge_key] = {}
+    fengge_dict[fengge_key]["name"] = anli["fengge_name"]
+    fengge_dict[fengge_key]["list"] = []
+
+  fengge = fengge_dict[fengge_key]
+  fengge["list"].append(
+    (anli_dir_name, order)
+  )
+
+  # Sort with order number
+  fengge["list"] = sorted(fengge["list"], key=lambda anli: anli[1])
+
+html_template_data.append({
+  "file_name": "index.html",
+  "template_name": "index.html",
+  "render_data": {
+    "html_title": u"3D展厅模板 - 首页",
+    "fengge_dict": fengge_dict,
+    "meta": META
+  }
+})
+
+# [
+#   ("cx_xiandai_01_1", 123, "2015..."),
+#   ("cx_xiandai_01_1", 123, "2015...")
+# ]
+# SQL: select * from <table> where <field_name>=<field_value>
+def _db_query(field_name, field_value, table):
+  l = []
+  for anli in anli_table:
+    if anli[field_name] != field_value:
+      continue
+    l.append(
+      (anli["id"], anli["unix_ctime"], anli["ctime"])
+    )
+  l = sorted(l, key=lambda item: item[1], reverse=True)
+  return l
+
+# [
+#   "keji",
+#   "xiandai"
+# ]
+def _db_group(field_name, table):
+  l = []
+  for anli in anli_table:
+    field_value = anli[field_name]
+    if field_value in l:
+      continue
+    l.append(field_value)
+  return l
+
+# Create more.html template render data.
+# {
+#   "html_title": "",
+#   "item_list": {
+#     "name": "KEJI",
+#     "list": [
+#       ("cx_keji_01_1", 123),
+#       ("cx_keji_02_1", 234)
+#     ]
+#   },
+#   "count": 45,
+#   "option": {
+#     "limit": 20
+#   },
+#   "meta": {}
+# }
+fengge_dict = {}
+
+for fengge_key in _db_group("fengge_key", anli_table):
+  anli_list = _db_query("fengge_key", fengge_key, anli_table)
+  anli_count = len(anli_list)
+  page_number = 1
+  current_page_list = []
+  current_anli_index = 1
+  for anli in anli_list:
+    anli_dir_name = anli[0]
+    fengge_name = _get_fengge_name(anli_dir_name)
+  
+    dir_created_unix_time = _get_created_date(anli_dir_name) # int
+    dir_created_time = time.ctime(dir_created_unix_time)
+  
+    current_page_list.append(
+      # dir_name      # dir_created_date
+      (anli_dir_name, dir_created_unix_time, str(dir_created_time))
+    )
+
+    if current_anli_index % LIMIT == 0 or current_anli_index == anli_count:
+      file_name = "more-" + fengge_key + "-" + str(page_number) + ".html"
+      html_template_data.append({
+        "file_name": file_name,
+        "template_name": "more.html",
+        "render_data": {
+          "html_title": u"3D展厅模板 - " + fengge_name,
+          "item_list": current_page_list,
+          "fengge_key": fengge_key,
+          "current_page": page_number,
+          "count": anli_count,
+          "option": {
+            "limit": LIMIT
+          },
+          "meta": META
+        }
+      })
+      current_page_list = []
+      page_number += 1
+
+    current_anli_index += 1
+
 
 #env = Environment(loader=filesystem_loader)
 env = Environment(loader=loaders.FileSystemLoader(TEMPLATE_DIR))
-tmpl_more = env.get_template('more.html')
-tmpl_index = env.get_template('index.html')
 
-# One fengge one html page, more.html
-for fengge_key, fengge_item in fengge_dict.iteritems():
-
-  if fengge_key == "":
-    continue
-
-  item_list = fengge_item["item_list"]
-
-  render_data = {
-    "html_title": u"3D展厅模板 - " + fengge_item["name"],
-    "item_list": item_list,
-    "count": len(item_list),
-    "option": {
-      "limit": LIMIT
-    },
-    "meta": META
-  }
-
-  output = tmpl_more.render(data = render_data).encode('utf8')
-  
-  # to save the results
-  more_html = os.path.join(ANLI_DIR, "more-" + fengge_key + ".html")
-  with open(more_html, "wb") as fh:
+for tpl_data in html_template_data:
+  tmpl = env.get_template(tpl_data["template_name"])
+  html_path = os.path.join(ANLI_DIR, tpl_data["file_name"])
+  output = tmpl.render(data = tpl_data["render_data"]).encode('utf8')
+  with open(html_path, "wb") as fh:
     fh.write(output)
-
-# front page
-render_data = {
-  "html_title": u"3D展厅模板 - 首页",
-  "fengge_dict": fengge_dict,
-  "meta": META
-}
-output = tmpl_index.render(data = render_data).encode('utf8')
-index_html = os.path.join(ANLI_DIR, "index.html")
-with open(index_html, "wb") as fh:
-  fh.write(output)

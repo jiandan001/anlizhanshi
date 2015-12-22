@@ -90,15 +90,15 @@
 <div id="glue_content">
   <div class="glue_right">
     <div style="height:30px;"></div>
-    {% for fengge, fengge_item in data.fengge_dict.iteritems() %}
+    {% for fengge_key, fengge_item in data.fengge_dict.iteritems() %}
     <div class="floor">
-      <a name="{{ fengge }}"></a>
-      <h2 id="section-{{ fengge }}">{{ fengge_item.name|e }}</h2>
+      <a name="{{ fengge_key }}"></a>
+      <h2 id="section-{{ fengge_key }}">{{ fengge_item.name|e }}</h2>
       <div class="floor_more">
-        <a href="more-{{ fengge }}.html">查看更多</a>
+        <a href="more-{{ fengge_key }}-1.html">查看更多</a>
       </div>
-      <div class="floor_list" id="{{ fengge }}">
-        {% for item in fengge_item.shouye_list %}
+      <div class="floor_list" id="{{ fengge_key }}">
+        {% for item in fengge_item.list %}
         <div class='floor_item' data-order="{{ item[1]|e }}">
           <a target="_self" href="../{{ item[0]|e }}/pano.swf">
             <img src="../{{ item[0]|e }}/pano.preview.jpg">
@@ -116,10 +116,10 @@
     <div class="category_wrap">
       <div class="category_head">分类展馆</div>
       <ul class="cate_list">
-        {% for fengge, fengge_item in data.fengge_dict.iteritems() %}
+        {% for fengge_key, fengge_item in data.fengge_dict.iteritems() %}
         <li class="cate_li li_a item1">
           <span class="icon"></span>
-          <a href="#section-{{ fengge }}">{{ fengge_item.name|e }}</a>
+          <a href="#section-{{ fengge_key }}">{{ fengge_item.name|e }}</a>
         </li>
         {% endfor %}
       </ul>

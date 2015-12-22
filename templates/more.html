@@ -65,14 +65,16 @@
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap-paginator.min.js"></script>
 <script>
 var options = {
-  currentPage: 1,
+  currentPage: {{ data.current_page }},
   totalPages: 1,
   limit: {{ data.option.limit }},
   size:"large",
   onPageClicked: function(e, originalEvent, type, page){
-    getExhibitions.call(this, cid, cname, page, false);
+    //getExhibitions.call(this, cid, cname, page, false);
+    window.location.href = "more-{{ data.fengge_key }}-" + page + ".html";
   }
 }
+
 options.totalPages = Math.ceil({{ data.count }}/options.limit);
 
 // (Debug Only) Static html file generation time.
