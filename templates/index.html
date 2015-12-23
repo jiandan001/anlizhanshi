@@ -75,14 +75,17 @@
 <div class="bannar" style="background:#f2f0f0;">
   <div class="top3_wrap">
     <ul class="content preview360">
-      <li style="background:url(image/tupian/gd01.png);"><a href="../rendafuzhongxinxixuejiaoxuexuting/index.html" target="_self"></a>        </li>
-      <li style="background:url(image/tupian/gx02.jpg);"><a href="../rendafuzhongxinxixuejiaoxueaoxiangjihua/index.html" target="_self"></a>        </li>
-      <li style="background:url(image/tupian/gx03.jpg);"><a href="../rendafuzhongxinxixuejiaoxuekegai/index.html" target="_self"></a>       </li>
+      {% for datu in data.datu_list %}
+      <li style="background:url(../{{ datu[0] }}/shouyedatu.jpg);"><a href="../{{ datu[0] }}/pano.swf" target="_self"></a>        </li>
+      {% endfor %}
     </ul>
     <div class="top3">
-      <a href="#"><img id="preview_0" src="image/tupian/gx01.png" /></a>        <span><!----></span>
-      <a href="#"><img id="preview_1" src="image/tupian/gx02.jpg" /></a>        <span><!----></span>
-      <a href="#"><img id="preview_2" src="image/tupian/gx03.jpg" /></a>        <span><!----></span>
+      {% for datu in data.datu_list %}
+      <a href="#">
+        <img id="preview_{{ datu[1]|e }}" src="../{{ datu[0] }}/pano.preview.jpg" />
+      </a>
+      <span><!----></span>
+      {% endfor %}
     </div>
   </div>
 </div><!-- end of bannar -->

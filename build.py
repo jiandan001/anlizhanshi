@@ -35,8 +35,11 @@ def _read_db():
   with open(os.path.join(_get_anli_path(), 'db.json')) as f:
     return json.load(f)
 
-def _is_shouye(name):
-  return (name.split('_')[-1].find("shouye") is not -1)
+def _is_shouyexiaotu(name):
+  return (name.split('_')[-1].find("shouyexiaotu") is not -1)
+
+def _is_shouyedatu(name):
+  return (name.split('_')[-1].find("shouyedatu") is not -1)
 
 # Convert "keji" to "科技"
 def _get_fengge_name(name):
@@ -61,14 +64,23 @@ def _is_anli_dir(name):
     return False
   return True
 
-def _get_shouye_order(name):
+def _get_shouyexiaotu_order(name):
   import re
-  p = re.compile("shouye([0-9]+)")
+  p = re.compile("shouyexiaotu([0-9]+)")
   m = p.search(name)
   if m:
-    return m.group(1)
+    return int(m.group(1))
   else:
-    return "9999"
+    return 9999
+
+def _get_shouyedatu_order(name):
+  import re
+  p = re.compile("shouyedatu([0-9]+)")
+  m = p.search(name)
+  if m:
+    return int(m.group(1))
+  else:
+    return 9999
 
 # e.g. "keji" or "xiandai"
 def _get_fengge_key(anli_dir_name):
@@ -96,7 +108,9 @@ META = {
 #   "fengge_key": "xiandai",
 #   "fengge_name": "XIANDAI",
 #   "unix_ctime": "123",
-#   "ctime": "2015..."
+#   "ctime": "2015...",
+#   "shouyexiaotu_order": 1,  # Optional
+#   "shouyedatu_order": 1     # Optional
 # }]
 def _parse_dir():
   table = []
@@ -122,8 +136,11 @@ def _parse_dir():
       "ctime": dir_created_time
     }
 
-    if _is_shouye(name):
-      row["shouye_order"] = _get_shouye_order(name)
+    if _is_shouyexiaotu(name):
+      row["shouyexiaotu_order"] = _get_shouyexiaotu_order(name)
+
+    if _is_shouyedatu(name):
+      row["shouyedatu_order"] = _get_shouyedatu_order(name)
 
     table.append(row)
   
@@ -141,47 +158,59 @@ html_template_data = []
 # Create index.html template render data.
 # {
 #   "html_title": "",
-#   "fengge_dict": {
+#   "xiaotu_dict": {
 #     "keji": {
 #       "name": "KEJI",
 #       "list": [
-#         ("cx_keji_01_1_shouye1", 1),
-#         ("cx_keji_02_1_shouye2", 2)
+#         ("cx_keji_01_1_shouyexiaotu1", 1),
+#         ("cx_keji_02_1_shouyexiaotu2", 2)
 #       ]
 #     }
 #   },
+#   "datu_list": [
+#     ("cx_keji_01_1_shouyedatu1", 1),
+#     ("cx_keji_02_1_shouyedatu2", 2)
+#   ],
 #   "meta": {}
 # }
-fengge_dict = {}
+xiaotu_dict = {}
+datu_list = []
 
 for anli in anli_table:
-  if "shouye_order" not in anli:
-    continue
-
   anli_dir_name = anli["id"]
-  order = anli["shouye_order"]
-  fengge_key = _get_fengge_key(anli_dir_name)
+  if "shouyexiaotu_order" in anli:
+    order = anli["shouyexiaotu_order"]
+    fengge_key = _get_fengge_key(anli_dir_name)
 
-  # Create empty list when not exist.
-  if fengge_key not in fengge_dict:
-    fengge_dict[fengge_key] = {}
-    fengge_dict[fengge_key]["name"] = anli["fengge_name"]
-    fengge_dict[fengge_key]["list"] = []
+    # Create empty list when not exist.
+    if fengge_key not in xiaotu_dict:
+      xiaotu_dict[fengge_key] = {}
+      xiaotu_dict[fengge_key]["name"] = anli["fengge_name"]
+      xiaotu_dict[fengge_key]["list"] = []
 
-  fengge = fengge_dict[fengge_key]
-  fengge["list"].append(
-    (anli_dir_name, order)
-  )
+    fengge = xiaotu_dict[fengge_key]
+    fengge["list"].append(
+      (anli_dir_name, order)
+    )
 
-  # Sort with order number
-  fengge["list"] = sorted(fengge["list"], key=lambda anli: anli[1])
+    # Sort with order number
+    fengge["list"] = sorted(fengge["list"], key=lambda anli: anli[1])
+
+  if "shouyedatu_order" in anli:
+    order = anli["shouyedatu_order"]
+    datu_list.append(
+      (anli_dir_name, order-1)
+    )
+    # Sort with order number
+    datu_list = sorted(datu_list, key=lambda anli: anli[1])
 
 html_template_data.append({
   "file_name": "index.html",
   "template_name": "index.html",
   "render_data": {
     "html_title": u"3D展厅模板 - 首页",
-    "fengge_dict": fengge_dict,
+    "fengge_dict": xiaotu_dict,
+    "datu_list": datu_list,
     "meta": META
   }
 })
@@ -231,7 +260,6 @@ def _db_group(field_name, table):
 #   },
 #   "meta": {}
 # }
-fengge_dict = {}
 
 for fengge_key in _db_group("fengge_key", anli_table):
   anli_list = _db_query("fengge_key", fengge_key, anli_table)
