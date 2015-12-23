@@ -38,14 +38,14 @@
 
 {% for item in data.item_list %}
 
-    <div class='floor_item' data-order="{{ item[1] }}" data-dir-created-time="{{ item[2] }}">
+    <div class='floor_item' data-order="{{ item[2] }}" data-dir-created-time="{{ item[3] }}">
       <div class='divImg' title='点击查看详细商品展览'>
         <a href="../{{ item[0]|e }}/pano.swf" target="_blank" style="display:inline-block;" >
           <img src="../{{ item[0]|e }}/pano.preview.jpg" class='exhibitionImg'></img>
         </a>
       </div>
       <a href="../{{ item[0]|e }}/pano.swf" target="_blank" style="color: #000;display:inline-block;" class='exhibitionName' title='点击查看详细商品展览'>
-        {{ item[0]|e }}
+        {{ item[1]|e }}
       </a>
     </div><!-- /.floor_item -->
 
