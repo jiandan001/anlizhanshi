@@ -113,7 +113,7 @@ def _db_select(field_name, field_value, table):
     l.append(
       (anli["id"], anli["mingcheng"], anli["unix_ctime"], anli["ctime"])
     )
-  l = sorted(l, key=lambda item: item[1], reverse=True)
+  l = sorted(l, key=lambda item: item[2], reverse=True)
   return l
 
 # [
@@ -295,7 +295,7 @@ def main():
     
       dir_created_unix_time = _get_created_date(anli_dir_name) # int
       dir_created_time = time.ctime(dir_created_unix_time)
-    
+
       current_page_list.append(
         # dir_name      # dir_created_date
         (anli_dir_name, anli_name, dir_created_unix_time, str(dir_created_time))
