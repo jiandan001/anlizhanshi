@@ -269,6 +269,7 @@ def main():
   # Create more.html template render data.
   # {
   #   "html_title": "",
+  #   "fengge_name": "",
   #   "item_list": {
   #     "name": "KEJI",
   #     "list": [
@@ -309,6 +310,7 @@ def main():
           "template_name": "more.html",
           "render_data": {
             "html_title": u"3D展厅模板 - " + fengge_name,
+            "fengge_name": fengge_name,
             "item_list": current_page_list,
             "fengge_key": fengge_key,
             "current_page": page_number,

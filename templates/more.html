@@ -24,13 +24,13 @@
 </div>
 
 <div class="header_bottom">
-      <div class="headerNav" id="place">
-		<a class="homePar">
-			<a class='home'>首页</a>
-		</a>
-		<span class="divider">>></span>
-		<a class="exhinfo"></a>
-	</div>
+  <div class="headerNav" id="place">
+    <a class="homePar"><a class='home'>首页</a></a>
+    <span class="divider">>></span>
+    <a class="exhinfo"><a class='placea'>{{ data.fengge_name|e }}</a></a>
+    <span class="divider">>></span>
+    <a class="exhinfo"><a class='placea'>所有展厅</a></a>
+  </div>
 </div><!-- end of header_bottom -->
 
 <div id="main">
@@ -87,7 +87,7 @@ if(options.totalPages<1){
 var init = true;
 if(init){
   //createCurPos.call(this, "");
-  $(".exhinfo").append("<a class='placea'>所有展厅</a>");
+  $(".exhinfo").append("");
   $("#pagination").bootstrapPaginator(options);
 }
 </script>
