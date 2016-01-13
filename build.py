@@ -229,6 +229,7 @@ def main():
     anli_dir_name = anli["id"]
     if "shouyexiaotu_order" in anli:
       order = anli["shouyexiaotu_order"]
+      anli_name = anli["mingcheng"]
       fengge_key = _get_fengge_key(anli_dir_name)
   
       # Create empty list when not exist.
@@ -239,11 +240,11 @@ def main():
   
       fengge = xiaotu_dict[fengge_key]
       fengge["list"].append(
-        (anli_dir_name, order)
+        (anli_dir_name, anli_name, order)
       )
   
       # Sort with order number
-      fengge["list"] = sorted(fengge["list"], key=lambda anli: anli[1])
+      fengge["list"] = sorted(fengge["list"], key=lambda anli: anli[2])
   
     if "shouyedatu_order" in anli:
       order = anli["shouyedatu_order"]
@@ -271,8 +272,8 @@ def main():
   #   "item_list": {
   #     "name": "KEJI",
   #     "list": [
-  #       ("cx_keji_01_1", 123),
-  #       ("cx_keji_02_1", 234)
+  #       ("cx_keji_01_1", "cx_keji_01_1", 1452661512, "2016-01-13T05:05:12+00:00"),
+  #       ("cx_keji_02_1", "科技案例02", 1452661512, "2016-01-13T05:05:12+00:00")
   #     ]
   #   },
   #   "count": 45,

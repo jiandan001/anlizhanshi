@@ -106,7 +106,7 @@
           <a target="_self" href="../{{ item[0]|e }}/pano.swf">
             <img src="../{{ item[0]|e }}/pano.preview.jpg">
           </a>
-          <div class='exhibition_name'></div>
+          <div class='exhibition_name'>{{ item[1]|e }}</div>
         </div><!-- /.floor_item -->
         {% endfor %}
       </div><!-- /.floor_list -->
